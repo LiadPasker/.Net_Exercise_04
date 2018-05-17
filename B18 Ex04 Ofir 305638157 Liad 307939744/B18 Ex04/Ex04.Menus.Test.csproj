@@ -31,7 +31,26 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="CountCapitals.cs" />
+    <Compile Include="DelegatesMenuTest.cs" />
+    <Compile Include="InterfacesMenuTest.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ShowDate.cs" />
+    <Compile Include="ShowTime.cs" />
+    <Compile Include="ShowVersion.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ex04.Menus.Delegates\Ex04.Menus.Delegates.csproj">
+      <Project>{2e1c055b-d766-4cbd-a28d-516af3383606}</Project>
+      <Name>Ex04.Menus.Delegates</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ex04.Menus.Interfaces\Ex04.Menus.Interfaces.csproj">
+      <Project>{102db324-6b19-44c8-a622-ffbb1de7ea55}</Project>
+      <Name>Ex04.Menus.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

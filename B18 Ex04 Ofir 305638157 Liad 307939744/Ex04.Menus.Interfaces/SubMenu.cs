@@ -12,7 +12,7 @@ namespace Ex04.Menus.Interfaces
             m_Text = i_Text;
         }
 
-        public virtual void Show()
+        public void Show()
         {
 
         }
