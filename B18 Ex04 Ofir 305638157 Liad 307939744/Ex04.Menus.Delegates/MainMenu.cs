@@ -9,5 +9,10 @@ namespace Ex04.Menus.Delegates
         public MainMenu(string i_Text) : base(i_Text)
         {
         }
+
+        protected override void showZeroOption()
+        {
+            // Console.WriteLine("0. Exit");
+        }
     }
 }
