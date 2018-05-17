@@ -1,4 +1,4 @@
-﻿namespace B18_Ex04
+﻿namespace Ex04.Menus.Test
 {
     class Program
     {
