@@ -11,6 +11,10 @@ namespace Ex04.Menus.Interfaces
         {
             m_Text = i_Text;
         }
+        public void AddMenuItem(MenuItem i_MenuItem)
+        {
+            m_MenuItems.Add(i_MenuItem);
+        }
 
         public void Show()
         {

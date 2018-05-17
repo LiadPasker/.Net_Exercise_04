@@ -25,7 +25,15 @@ namespace Ex04.Menus.Delegates
 
         public void GetUserInput()
         {
-            
+            Console.WriteLine("Please select one of the following:");
+            int option = int.Parse(Console.ReadLine());
+
+
+        }
+
+        public void AddMenuItem(MenuItem i_MenuItem)
+        {
+            m_MenuItems.Add(i_MenuItem);
         }
 
         public override void OnClick()
