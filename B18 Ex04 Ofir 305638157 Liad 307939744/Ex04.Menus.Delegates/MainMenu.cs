@@ -12,7 +12,7 @@ namespace Ex04.Menus.Delegates
 
         protected override void showZeroOption()
         {
-            // Console.WriteLine("0. Exit");
+             Console.WriteLine("\n0. Exit\n");
         }
     }
 }

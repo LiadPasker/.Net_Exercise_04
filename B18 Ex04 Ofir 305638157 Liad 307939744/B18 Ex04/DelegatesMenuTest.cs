@@ -10,13 +10,14 @@ namespace Ex04.Menus.Test
 
         private void showTime()
         {
-            Console.WriteLine(DateTime.Now.ToShortTimeString());
+            Console.WriteLine("The current time is: {0}", DateTime.Now.ToShortTimeString());
+            Console.ReadLine();
         }
 
         private void showDate()
         {
-            Console.WriteLine(DateTime.Now.ToShortDateString());
-
+            Console.WriteLine("The current date is: {0}", DateTime.Now.ToShortDateString());
+            Console.ReadLine();
         }
 
         private void countCapitals()
@@ -35,12 +36,14 @@ namespace Ex04.Menus.Test
                 }
 
                 Console.WriteLine("The input sentence contains {0} uppercase letters.", upperCaseLetters);
+                Console.ReadLine();
             }
         }
 
         private void showVersion()
         {
             Console.WriteLine("Version: 18.2.4.0");
+            Console.ReadLine();
         }
 
         private void buildMainMenu()

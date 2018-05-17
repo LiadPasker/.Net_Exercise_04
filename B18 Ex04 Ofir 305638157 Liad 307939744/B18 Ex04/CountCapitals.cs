@@ -20,6 +20,7 @@ namespace Ex04.Menus.Test
             }
 
             Console.WriteLine("The input sentence contains {0} uppercase letters.", upperCaseLetters);
+            Console.ReadLine();
         }
     }
 }

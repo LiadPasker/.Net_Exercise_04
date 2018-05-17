@@ -9,7 +9,8 @@ namespace Ex04.Menus.Test
 
         public void Invoke()
         {
-            Console.WriteLine(m_VersionText);    
+            Console.WriteLine(m_VersionText);
+            Console.ReadLine();  
         }
     }
 }

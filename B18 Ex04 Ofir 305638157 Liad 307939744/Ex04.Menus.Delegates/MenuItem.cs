@@ -8,12 +8,13 @@ namespace Ex04.Menus.Delegates
     {
         protected string m_Text;
 
+        public abstract void OnClick();
+
         public MenuItem(string i_Text)
         {
             m_Text = i_Text;
         }
 
-        public abstract void OnClick();
 
         public string Text
         {

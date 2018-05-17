@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Text;
 
 namespace Ex04.Menus.Delegates
 {
     public class SubMenu : MenuItem
     {
+        private const int BACKOREXIT = 0;
         private bool m_KeepLooping;
         private List<MenuItem> m_MenuItems;
 
@@ -20,14 +22,19 @@ namespace Ex04.Menus.Delegates
         protected void OnZeroChoise()
         {
             m_KeepLooping = false;
+
+            if(this is MainMenu)
+            {
+                Console.WriteLine("See you...");
+                Thread.Sleep(1000);
+            }
         }
 
         public virtual void Show()
         {
-            Console.Clear();
-
             while (m_KeepLooping)
             {
+                Console.Clear();
                 printMenu();
                 GetUserInput();
             }
@@ -35,18 +42,25 @@ namespace Ex04.Menus.Delegates
 
         private void printMenu()
         {
-            int i = 1;
-            foreach (MenuItem menuItem in m_MenuItems)
+            Console.WriteLine(this.m_Text);
+            for (int i=0;i<this.m_Text.Length;i++)
             {
-                Console.WriteLine("{0}. {1}", ++i, menuItem.Text);
+                Console.Write("*");
             }
 
+            Console.WriteLine();
+            for (int i=1; i< m_MenuItems.Count; i++)
+            {
+                Console.Write("\n{0}. {1}", i, m_MenuItems[i].Text);
+            }
+
+            Console.WriteLine();
             showZeroOption();
         }
 
         protected virtual void showZeroOption()
         {
-            Console.WriteLine("0. Back");
+            Console.WriteLine("\n0. Back\n");
         }
 
         public void GetUserInput()
@@ -73,7 +87,7 @@ namespace Ex04.Menus.Delegates
         {
             int choice = int.Parse(i_Option);
 
-            if (choice >= 0 && choice < m_MenuItems.Count)
+            if (choice >= BACKOREXIT && choice < m_MenuItems.Count)
             {
                 m_MenuItems[choice].OnClick();
             }
