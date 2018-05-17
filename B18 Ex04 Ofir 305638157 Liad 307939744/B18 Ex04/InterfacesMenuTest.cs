@@ -4,7 +4,7 @@ namespace Ex04.Menus.Test
 {
     class InterfacesMenuTest
     {
-        private MainMenu m_MainMenu = null;
+        private MainMenu m_MainMenu;
         private string m_MainMenuText = "Interfaces Menu";
 
         private void buildMainMenu()
@@ -16,7 +16,13 @@ namespace Ex04.Menus.Test
             dateTimeSubMenu.AddMenuItem(new ActionMenu("Show Date", new ShowDate()));
             versionAndCapitalsSubMenu.AddMenuItem(new ActionMenu("Count Capitals", new CountCapitals()));
             versionAndCapitalsSubMenu.AddMenuItem(new ActionMenu("Show Version", new ShowVersion()));
-            m_MainMenu.AddMenuItem()
+            m_MainMenu.AddMenuItem(dateTimeSubMenu);
+            m_MainMenu.AddMenuItem(versionAndCapitalsSubMenu);
+        }
+
+        public InterfacesMenuTest()
+        {
+            m_MainMenu = new MainMenu(m_MainMenuText);
         }
 
         public void Show()
