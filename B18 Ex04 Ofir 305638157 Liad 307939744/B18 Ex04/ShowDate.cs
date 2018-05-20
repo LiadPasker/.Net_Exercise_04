@@ -3,7 +3,7 @@ using Ex04.Menus.Interfaces;
 
 namespace Ex04.Menus.Test
 {
-    class ShowDate : IActionListener
+    public class ShowDate : IActionListener
     {
         public void Invoke()
         {

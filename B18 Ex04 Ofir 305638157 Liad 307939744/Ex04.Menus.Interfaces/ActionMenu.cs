@@ -12,7 +12,7 @@ namespace Ex04.Menus.Interfaces
             m_ActionListener.Invoke();
         }
 
-        public ActionMenu(string i_Text, IActionListener i_ActionListener): base(i_Text)
+        public ActionMenu(string i_Text, IActionListener i_ActionListener) : base(i_Text)
         {
             m_ActionListener = i_ActionListener;
         }

@@ -3,7 +3,7 @@ using Ex04.Menus.Delegates;
 
 namespace Ex04.Menus.Test
 {
-    class DelegatesMenuTest
+    public class DelegatesMenuTest
     {
         private MainMenu m_MainMenu;
         private string m_MainMenuText = "Delegates Menu";

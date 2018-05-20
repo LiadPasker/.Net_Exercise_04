@@ -7,7 +7,7 @@ namespace Ex04.Menus.Test
     {
         public void Invoke()
         {
-            Console.WriteLine("The current time is: {0}",DateTime.Now.ToShortTimeString());
+            Console.WriteLine("The current time is: {0}", DateTime.Now.ToShortTimeString());
             Console.ReadLine();
         }
     }

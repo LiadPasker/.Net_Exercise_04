@@ -2,7 +2,7 @@
 
 namespace Ex04.Menus.Test
 {
-    class InterfacesMenuTest
+    public class InterfacesMenuTest
     {
         private MainMenu m_MainMenu;
         private string m_MainMenuText = "Interfaces Menu";

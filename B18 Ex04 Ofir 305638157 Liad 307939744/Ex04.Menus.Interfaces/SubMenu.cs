@@ -12,8 +12,8 @@ namespace Ex04.Menus.Interfaces
 
         private void printMenu()
         {
-            Console.WriteLine(this.m_Text);
-            for (int i = 0; i < this.m_Text.Length; i++)
+            Console.WriteLine(Text);
+            for (int i = 0; i < Text.Length; i++)
             {
                 Console.Write("*");
             }
@@ -21,7 +21,7 @@ namespace Ex04.Menus.Interfaces
             Console.WriteLine();
             for (int i = 0; i < m_MenuItems.Count; i++)
             {
-                Console.Write("{0}{1}. {2}", Environment.NewLine, (i + 1), m_MenuItems[i].Text);
+                Console.Write("{0}{1}. {2}", Environment.NewLine, i + 1, m_MenuItems[i].Text);
             }
 
             Console.WriteLine();
@@ -34,6 +34,7 @@ namespace Ex04.Menus.Interfaces
             string choice = Console.ReadLine();
 
             while (true)
+            {
                 try
                 {
                     handleUserChoice(choice);
@@ -46,6 +47,7 @@ namespace Ex04.Menus.Interfaces
                     Console.WriteLine("Invalid menu selection.{0}Try again:", Environment.NewLine);
                     choice = Console.ReadLine();
                 }
+            }
         }
 
         private void handleUserChoice(string i_Option)
@@ -118,7 +120,6 @@ namespace Ex04.Menus.Interfaces
             {
                 Console.WriteLine("MenuItem wasn't found.");
             }
-
         }
     }
 }

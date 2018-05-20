@@ -12,8 +12,8 @@ namespace Ex04.Menus.Delegates
 
         private void printMenu()
         {
-            Console.WriteLine(m_Text);
-            for (int i = 0; i < m_Text.Length; i++)
+            Console.WriteLine(Text);
+            for (int i = 0; i < Text.Length; i++)
             {
                 Console.Write("*");
             }
@@ -34,6 +34,7 @@ namespace Ex04.Menus.Delegates
             string choice = Console.ReadLine();
 
             while (true)
+            {
                 try
                 {
                     handleUserChoice(choice);
@@ -46,6 +47,7 @@ namespace Ex04.Menus.Delegates
                     Console.WriteLine("Invalid menu selection.{0}Try again:", Environment.NewLine);
                     choice = Console.ReadLine();
                 }
+            }
         }
 
         private void handleUserChoice(string i_Option)

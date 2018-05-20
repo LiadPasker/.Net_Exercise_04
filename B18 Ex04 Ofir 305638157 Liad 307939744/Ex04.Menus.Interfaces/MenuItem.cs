@@ -2,7 +2,7 @@
 {
     public abstract class MenuItem
     {
-        protected string m_Text;
+        private string m_Text;
 
         protected internal MenuItem(string i_Text)
         {
