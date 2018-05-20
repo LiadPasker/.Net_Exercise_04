@@ -1,22 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Ex04.Menus.Delegates
+﻿namespace Ex04.Menus.Delegates
 {
     public abstract class MenuItem
     {
         protected string m_Text;
 
-        public abstract void OnClick();
-
-        public MenuItem(string i_Text)
+        protected internal MenuItem(string i_Text)
         {
             m_Text = i_Text;
         }
 
+        protected internal abstract void OnClick();
 
-        public string Text
+        protected internal string Text
         {
             get
             {

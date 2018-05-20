@@ -1,18 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Ex04.Menus.Interfaces
 {
     public class MainMenu : SubMenu
     {
-        public MainMenu(string i_Text) : base(i_Text)
+        protected override void ShowZeroOption()
         {
+            Console.WriteLine("{0}0. Exit{0}", Environment.NewLine);
         }
 
-        protected override void showZeroOption()
+        public MainMenu(string i_Text) : base(i_Text)
         {
-            Console.WriteLine("\n0. Exit\n");
         }
     }
 }

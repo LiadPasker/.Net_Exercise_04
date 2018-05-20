@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Ex04.Menus.Delegates
 {
@@ -8,13 +6,7 @@ namespace Ex04.Menus.Delegates
 
     public class ActionMenu : MenuItem
     {
-        public event ExecutionDelegate Execution;
-
-        public ActionMenu(string i_Text) : base(i_Text)
-        {
-        }
-
-        public override void OnClick()
+        protected internal override void OnClick()
         {
             Console.Clear();
             button_OnClick();
@@ -26,7 +18,12 @@ namespace Ex04.Menus.Delegates
             {
                 Execution.Invoke();
             }
-        } 
+        }
 
+        public ActionMenu(string i_Text) : base(i_Text)
+        {
+        }
+
+        public event ExecutionDelegate Execution;
     }
 }
